@@ -11,4 +11,7 @@ public class Main {
         tv.setCurrentChannel(2000);
         System.out.println(tv.getCurrentChannel());
 
+        int value = 10;
+        int newValue = value++;
+
 }}

@@ -22,15 +22,38 @@ public class TV {
         return currentVolume;
     }
     public void increaseCurrentChannel() {
-
+        if (currentChannel == 100) {
+            currentChannel = 0;
+            return;
+        }
+        currentChannel +=1; //тоже что и ++
     }
     public void decreaseCurrentChannel() {
-
+        if (currentChannel == 0) {
+            currentChannel = 100;
+            return;
+        }
+        currentChannel--;
     }
     public void increaseCurrentVolume() {
-
+        if (currentVolume == 100){
+            return;
+        }
+        currentVolume++;
     }
     public void decreaseCurrentVolume() {
-
+        if (currentVolume ==0){
+            return;
+        }
+        currentVolume--;
+    }
+    public void setCurrentVolume(int currentVolume) {
+        if (currentVolume < 0){
+            return;
+        }
+        if (currentVolume > 100) {
+            return;
+        }
+        this.currentVolume = currentChannel;
     }
 }
