@@ -9,14 +9,28 @@ public class TV {
     }
 
     public void setCurrentChannel(int currentChannel) {
-        if (currentChannel >= 0 && currentChannel <= 100) {
-        this.currentChannel = currentChannel;
+        if (currentChannel < 0){
+            return;
         }
+        if (currentChannel > 100) {
+            return;
+        }
+        this.currentChannel = currentChannel;
     }
 
     public int getCurrentVolume() {
         return currentVolume;
     }
+    public void increaseCurrentChannel() {
 
+    }
+    public void decreaseCurrentChannel() {
 
+    }
+    public void increaseCurrentVolume() {
+
+    }
+    public void decreaseCurrentVolume() {
+
+    }
 }
